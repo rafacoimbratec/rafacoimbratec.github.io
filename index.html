@@ -3,61 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional CV of [Your Name]">
-    <title>[Your Name] - CV</title>
+    <meta name="description" content="Professional CV of Rafael Azeiteiro, showcasing work experience, education, skills, and projects.">
+    <title>Rafael Azeiteiro - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>[Your Name]</h1>
-            <p>[Your Professional Title]</p>
+            <img src="content/Foto_Rafa.jpg" alt="Rafael Azeiteiro" class="profile-photo">
+            <h1>Rafael Coimbra Azeiteiro</h1>
+            <p>Aerospace Engineer | Aerodynamics & Propulsion</p>
             <div class="contact-info">
-                <span>📧 <a href="mailto:your.email@example.com">your.email@example.com</a></span>
-                <span>📱 <a href="tel:+1234567890">+123 456 7890</a></span>
-                <span>🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></span>
-                <span>💻 <a href="https://github.com/rafacoimbratec" target="_blank">GitHub</a></span>
+                <span><i class="fa-solid fa-at"></i> <a href="mailto:rafael.coimbra.azeiteiro@gmail.com">rafael.coimbra.azeiteiro@gmail.com</a></span>
+                <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/rafael-azeiteiro-59934a256/" target="_blank">LinkedIn</a></span>
+                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/rafacoimbratec" target="_blank">GitHub</a></span>
             </div>
+            <nav class="nav-menu">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+            </nav>
         </header>
-
+        
         <main>
             <section id="about">
                 <h2>About Me</h2>
                 <p>
-                    Write a brief professional summary here. Highlight your key strengths, years of experience, 
-                    and what makes you unique. Keep it concise and impactful—aim for 2-3 sentences that capture 
-                    your professional identity and career goals.
+                    Aerospace Engineering graduate student at Instituto Superior Técnico, Lisbon University, Portugal. 
+                </p>
+                <p>
+                    I am highly motivated, adaptable, and thrive in both team-based and independent work.
                 </p>
             </section>
 
             <section id="experience">
-                <h2>Work Experience</h2>
+                <h2>Experience</h2>
                 
                 <div class="item">
                     <div class="item-header">
-                        <h3>[Job Title]</h3>
-                        <span class="item-date">[Start Date] - [End Date]</span>
+                        <h3>Summer Camp Counselor</h3>
+                        <span class="item-date">Jul 2024 - Sept 2024</span>
                     </div>
-                    <div class="item-title">[Company Name] | [Location]</div>
+                    <div class="item-title">Centro De Férias Desportivas Nos Mochos | Espinho, Portugal</div>
                     <div class="item-description">
                         <ul>
-                            <li>Key achievement or responsibility</li>
-                            <li>Another important accomplishment</li>
-                            <li>Technical skill or project you worked on</li>
+                            <li>Summer Camp Counselor Volunteer dedicated to creating a fun, safe, and enriching environment for all campers aged from 6 to 15 years old</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="item-header">
-                        <h3>[Previous Job Title]</h3>
-                        <span class="item-date">[Start Date] - [End Date]</span>
+                        <h3>Volunteer</h3>
+                        <span class="item-date">Since 2022</span>
                     </div>
-                    <div class="item-title">[Company Name] | [Location]</div>
+                    <div class="item-title">Cruz Vermelha | Espinho, Portugal</div>
                     <div class="item-description">
                         <ul>
-                            <li>Key achievement or responsibility</li>
-                            <li>Another important accomplishment</li>
+                            <li>Collected food donations from major chains to support poverty relief efforts</li>
                         </ul>
                     </div>
                 </div>
@@ -68,44 +75,89 @@
                 
                 <div class="item">
                     <div class="item-header">
-                        <h3>[Degree Name]</h3>
-                        <span class="item-date">[Graduation Year]</span>
+                        <h3>MSc in Aerospace Engineering</h3>
+                        <span class="item-date">Sept 2024 - Present</span>
                     </div>
-                    <div class="item-title">[University Name] | [Location]</div>
+                    <div class="item-title">Instituto Superior Técnico | Lisbon, Portugal</div>
                     <div class="item-description">
-                        Relevant coursework, honors, or achievements
+                        <ul>
+                            <li>Core Structure: Space</li>
+                            <li>Secondary Study Stream: Aerodynamics and Propulsion</li>
+                            <li>Master's Thesis: Mars Atmospheric Reentry Guidance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>BSc in Aerospace Engineering</h3>
+                        <span class="item-date">Sept 2021 - Jul 2024</span>
+                    </div>
+                    <div class="item-title">Instituto Superior Técnico | Lisbon, Portugal</div>
+                    <div class="item-description">
+                        <p>Cumulative Grade: 16/20</p>
                     </div>
                 </div>
             </section>
 
             <section id="skills">
-                <h2>Skills</h2>
+                <h2>Core Competencies</h2>
                 
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h4>Programming Languages</h4>
                         <ul>
-                            <li>JavaScript</li>
+                            <li>C</li>
                             <li>Python</li>
-                            <li>Java</li>
+                            <li>Matlab</li>
+                            <li>Simulink</li>
                         </ul>
                     </div>
 
                     <div class="skill-category">
-                        <h4>Technologies & Tools</h4>
+                        <h4>Engineering Software</h4>
                         <ul>
-                            <li>React</li>
+                            <li>SOLIDWORKS (CAD)</li>
+                            <li>Star CCM+, OpenFOAM (CFD)</li>
+                            <li>Festo FluidSIM (Pneumatics)</li>
+                            <li>CST Studio Suite, LTSpice, KiCAD (EM Analysis)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Aerospace & Propulsion Software</h4>
+                        <ul>
+                            <li>CEA (Chemical Equilibrium Analysis)</li>
+                            <li>GMAT (Mission Analysis)</li>
+                            <li>RPA (Rocket Propulsion Analysis)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Optimization Tools</h4>
+                        <ul>
+                            <li>OpenMDAO (Multidisciplinary Optimization)</li>
+                            <li>OpenStruct (Aerostructural Optimization)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Web Development</h4>
+                        <ul>
+                            <li>Frontend and Backend Development</li>
                             <li>Node.js</li>
-                            <li>Git</li>
+                            <li>MongoDB (NoSQL)</li>
+                            <li>JSON</li>
                         </ul>
                     </div>
 
                     <div class="skill-category">
-                        <h4>Other Skills</h4>
+                        <h4>Methodology & Tools</h4>
                         <ul>
-                            <li>Agile/Scrum</li>
-                            <li>Team Leadership</li>
-                            <li>Problem Solving</li>
+                            <li>Applied Requirements Engineering</li>
+                            <li>Agile and Kanban Methodology</li>
+                            <li>MS Office</li>
+                            <li>LaTeX</li>
                         </ul>
                     </div>
                 </div>
@@ -115,26 +167,39 @@
                 <h2>Projects</h2>
                 
                 <div class="item">
-                    <h3>[Project Name]</h3>
+                    <h3>ISTrain (IMechE Railway Challenge)</h3>
+                    <span class="item-date">Since 2025</span>
                     <div class="item-description">
-                        <p>Brief description of the project, technologies used, and your role. 
-                        Include a link if the project is publicly available.</p>
-                        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, etc.</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <h3>[Another Project]</h3>
-                    <div class="item-description">
-                        <p>Description of another significant project.</p>
-                        <p><strong>Technologies:</strong> Python, Flask, PostgreSQL</p>
+                        <div class="model-viewer-container">
+                            <model-viewer 
+                                src="content/bogie-compressed.glb" 
+                                alt="ISTrain Locomotive CAD Model" 
+                                auto-rotate 
+                                camera-controls 
+                                shadow-intensity="1"
+                                exposure="1"
+                                camera-orbit="45deg 75deg 2m"
+                                min-camera-orbit="auto auto 1m"
+                                max-camera-orbit="auto auto 10m"
+                                style="width: 100%; height: 400px; background-color: #2c2b3c;">
+                                <div slot="progress-bar" style="color: white; text-align: center; padding: 20px;">
+                                    Loading 3D Model...
+                                </div>
+                            </model-viewer>
+                        </div>
+                        <p><strong>Technical Director (2025-2026)</strong> - Leading a 30+ member railway student team in Instituto Superior Técnico. Responsible for strategy, system integration, sponsor relations and team engineering deliverables.</p>
+                        <ul>
+                            <li><strong>Vehicle Dynamics Team Lead (2025)</strong> - Led a multidisciplinary subteam into the design and validation of the train's suspension system and pneumatic-actuated braking architecture.</li>
+                            <li><strong>Powertrain & Energy Systems Engineer (2025)</strong> - Developed and optimized the electric powertrain and cooling systems, applying principles of energy storage, vector control, and passive cooling strategies.</li>
+                        </ul>
+                        <p><strong>Technologies:</strong> SOLIDWORKS, Simulink, Python, Vector Control, CFD Analysis</p>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 [Your Name]. All rights reserved.</p>
+            <p>&copy; 2026 Rafael Coimbra Azeiteiro. All rights reserved.</p>
         </footer>
     </div>
 </body>
