@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional CV of Rafael Azeiteiro, showcasing work experience, education, skills, and projects.">
     <title>Rafael Azeiteiro - CV</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
@@ -12,7 +13,7 @@
 <body>
     <div class="container">
         <header>
-            <img src="content/Foto_Rafa.jpg" alt="Rafael Azeiteiro" class="profile-photo">
+            <img src="content/Foto_Rafa.png" alt="Rafael Azeiteiro" class="profile-photo">
             <h1>Rafael Coimbra Azeiteiro</h1>
             <p>Aerospace Engineer | Aerodynamics & Propulsion</p>
             <div class="contact-info">
@@ -167,32 +168,45 @@
                 <h2>Projects</h2>
                 
                 <div class="item">
-                    <h3>ISTrain (IMechE Railway Challenge)</h3>
-                    <span class="item-date">Since 2025</span>
+                    <div class="item-header">
+                        <h3>ISTrain (IMechE Railway Challenge)</h3>
+                        <span class="item-date">Since 2025</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://sites.google.com/tecnico.ulisboa.pt/istrain-pt/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-globe"></i> Website
+                        </a>
+                        <a href="https://www.instagram.com/istrain_lisboa/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                    </div>
                     <div class="item-description">
-                        <div class="model-viewer-container">
-                            <model-viewer 
-                                src="content/bogie_.glb" 
-                                alt="ISTrain Locomotive CAD Model" 
-                                auto-rotate 
-                                camera-controls 
-                                shadow-intensity="1"
-                                exposure="1"
-                                camera-orbit="45deg 75deg 2m"
-                                min-camera-orbit="auto auto 1m"
-                                max-camera-orbit="auto auto 10m"
-                                style="width: 100%; height: 400px; background-color: #2c2b3c;">
-                                <div slot="progress-bar" style="color: white; text-align: center; padding: 20px;">
-                                    Loading 3D Model...
+                        <!-- Project Gallery -->
+                        <div class="project-gallery">
+                            <!-- Team Picture -->
+                            <div class="gallery-item" onclick="openLightbox(0)">
+                                <img src="content/team_picture.jpg" alt="ISTrain Team" class="gallery-thumbnail">
+                                <div class="gallery-overlay">
+                                    <i class="fa-solid fa-users"></i> Team Photo
                                 </div>
-                            </model-viewer>
+                            </div>
+                            <!-- 3D CAD Model -->
+                            <div class="gallery-item" onclick="openLightbox(1)">
+                                <div class="gallery-thumbnail cad-thumbnail">
+                                    <i class="fa-solid fa-cube" style="font-size: 4rem; color: white;"></i>
+                                    <p style="margin-top: 1rem; color: white;">3D CAD Model</p>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <i class="fa-solid fa-expand"></i> View Interactive 3D
+                                </div>
+                            </div>
                         </div>
-                        <p><strong>Technical Director (2025-2026)</strong> - Leading a 30+ member railway student team in Instituto Superior Técnico. Responsible for strategy, system integration, sponsor relations and team engineering deliverables.</p>
+                        
                         <ul>
-                            <li><strong>Vehicle Dynamics Team Lead (2025)</strong> - Led a multidisciplinary subteam into the design and validation of the train's suspension system and pneumatic-actuated braking architecture.</li>
-                            <li><strong>Powertrain & Energy Systems Engineer (2025)</strong> - Developed and optimized the electric powertrain and cooling systems, applying principles of energy storage, vector control, and passive cooling strategies.</li>
+                            <li><strong>Technical Director (2025-2026)</strong> - Leading a 30+ member railway student team in Instituto Superior Técnico. Responsible for strategy, system integration, sponsor relations and team engineering deliverables.</li>
+                            <li><strong>Vehicle Dynamics Team Lead (2025)</strong> - Led Vehicle Dynamics team into the design and validation of the train's suspension system and pneumatic-actuated braking architecture.</li>
+                            <li><strong>Powertrain & Energy Systems Engineer (2025)</strong> - Developed and optimized the electric powertrain and cooling systems of the locomotive.</li>
                         </ul>
-                        <p><strong>Technologies:</strong> SOLIDWORKS, Simulink, Python, Vector Control, CFD Analysis</p>
                     </div>
                 </div>
             </section>
@@ -202,5 +216,58 @@
             <p>&copy; 2026 Rafael Coimbra Azeiteiro. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Gallery Image" style="display: none;">
+            <div id="lightbox-model" style="display: none;">
+                <model-viewer 
+                    id="lightbox-model-viewer"
+                    src="content/bogie_.glb" 
+                    alt="ISTrain Locomotive CAD Model" 
+                    auto-rotate 
+                    camera-controls 
+                    shadow-intensity="1"
+                    exposure="1"
+                    camera-orbit="45deg 75deg 2m"
+                    min-camera-orbit="auto auto 1m"
+                    max-camera-orbit="auto auto 10m"
+                    style="width: 80vw; height: 80vh; background-color: #1b2432;">
+                </model-viewer>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(index) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const model = document.getElementById('lightbox-model');
+            
+            if (index === 0) {
+                // Show team picture
+                img.src = 'content/team_picture.jpg';
+                img.style.display = 'block';
+                model.style.display = 'none';
+            } else if (index === 1) {
+                // Show 3D model
+                img.style.display = 'none';
+                model.style.display = 'block';
+            }
+            
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </body>
 </html>
