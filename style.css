@@ -13,13 +13,16 @@ body {
     line-height: 1.6;
     color: #e0e0e0;
     background-color: #121420;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     background-color: #1b2432;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
 }
 
 header {
@@ -261,6 +264,19 @@ h3 {
     border-radius: 8px;
 }
 
+.gallery-placeholder {
+    background: linear-gradient(135deg, #2c2b3c 0%, #1b2432 100%);
+    border: 2px dashed #403f4c;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 ul {
     margin-left: 1.5rem;
     margin-top: 0.5rem;
@@ -297,16 +313,6 @@ footer {
     background-color: #121420;
     color: white;
     text-align: center;
-    .nav-menu {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .nav-menu a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
-
     padding: 1.5rem;
     font-size: 0.9rem;
 }
@@ -331,8 +337,19 @@ footer {
         gap: 0.5rem;
     }
 
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+    }
+
     main {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     h2 {
@@ -350,6 +367,23 @@ footer {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-links a {
+        justify-content: center;
+    }
+
+    .gallery-thumbnail {
+        height: 200px;
     }
 
     model-viewer {

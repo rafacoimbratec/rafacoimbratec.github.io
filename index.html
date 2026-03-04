@@ -209,6 +209,46 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Aerotéc - Aerospace Engineering Students Group</h3>
+                        <span class="item-date">2022 - 2024</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://sa.aerotec.pt/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-globe"></i> Website
+                        </a>
+                        <a href="https://www.instagram.com/aero.tec/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                    <div class="item-description">
+                        <!-- Project Gallery -->
+                        <div class="project-gallery">
+                            <!-- Aerospace Week -->
+                            <div class="gallery-item" onclick="openLightbox(2)">
+                                <img src="content/semana_aero.jpg" alt="Aerospace Week" class="gallery-thumbnail">
+                                <div class="gallery-overlay">
+                                    <i class="fa-solid fa-calendar"></i> Aerospace Week
+                                </div>
+                            </div>
+                            <!-- Rocket Workshop -->
+                            <div class="gallery-item" onclick="openLightbox(3)">
+                                <img src="content/workshop_rockets.webp" alt="Rocket Workshop" class="gallery-thumbnail">
+                                <div class="gallery-overlay">
+                                    <i class="fa-solid fa-rocket"></i> Rocket Workshop
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul>
+                            <li><strong>GTW - Website (2023-2024)</strong> - Coordinated communication across AeroTéc's website working groups.</li>
+                            <li><strong>Website & Technologies Lead (2023)</strong> - Organized Aerospace Week 2023 and managed the 2024 website.</li>
+                            <li><strong>Rocket Workshop Member (2022-2023)</strong> - Delivered workshops on rocket stability and design, guiding students through building and launching model rockets.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -246,15 +286,22 @@
             const img = document.getElementById('lightbox-img');
             const model = document.getElementById('lightbox-model');
             
-            if (index === 0) {
-                // Show team picture
-                img.src = 'content/team_picture.jpg';
-                img.style.display = 'block';
-                model.style.display = 'none';
-            } else if (index === 1) {
+            const images = [
+                'content/team_picture.jpg',  // index 0
+                null,  // index 1 - 3D model
+                'content/semana_aero.jpg',  // index 2
+                'content/workshop_rockets.webp'  // index 3
+            ];
+            
+            if (index === 1) {
                 // Show 3D model
                 img.style.display = 'none';
                 model.style.display = 'block';
+            } else {
+                // Show image
+                img.src = images[index];
+                img.style.display = 'block';
+                model.style.display = 'none';
             }
             
             lightbox.style.display = 'flex';
