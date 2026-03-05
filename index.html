@@ -39,6 +39,13 @@
                 <p>
                     I am highly motivated, adaptable, and thrive in both team-based and independent work.
                 </p>
+                <p>
+                    <strong>Seeking opportunities in:</strong> Aerothermodynamics, Propulsion, Incompressible Aerodynamics, 
+                    Product & Systems, Defence & Strategy and Guidance, Navigation & Control (GNC).
+                </p>
+                <a href="content/Cv_Rafael.pdf" download="Rafael_Azeiteiro_CV.pdf" class="cv-download-btn">
+                    <i class="fa-solid fa-download"></i> Download CV
+                </a>
             </section>
 
             <section id="experience">
@@ -82,8 +89,8 @@
                     <div class="item-title">Instituto Superior Técnico | Lisbon, Portugal</div>
                     <div class="item-description">
                         <ul>
-                            <li>Core Structure: Space</li>
-                            <li>Secondary Study Stream: Aerodynamics and Propulsion</li>
+                            <li>Major: Space</li>
+                            <li>Minor: Aerodynamics and Propulsion</li>
                             <li>Master's Thesis: Mars Atmospheric Reentry Guidance</li>
                         </ul>
                     </div>
@@ -249,6 +256,38 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Aerospike Nozzle Design</h3>
+                        <span class="item-date">Personal Project</span>
+                    </div>
+                    <div class="item-description">
+                        <!-- Project Gallery -->
+                        <div class="project-gallery">
+                            <!-- Linear Aerospike Contour -->
+                            <div class="gallery-item" onclick="openLightbox(4)">
+                                <img src="content/Linear_Aerospike_Countour.png" alt="Linear Aerospike Contour" class="gallery-thumbnail">
+                                <div class="gallery-overlay">
+                                    <i class="fa-solid fa-chart-line"></i> Aerospike Contour
+                                </div>
+                            </div>
+                            <!-- Mach Number Analysis -->
+                            <div class="gallery-item" onclick="openLightbox(5)">
+                                <img src="content/mach_number_110PR.png" alt="Mach Number Analysis" class="gallery-thumbnail">
+                                <div class="gallery-overlay">
+                                    <i class="fa-solid fa-wind"></i> Mach Number Analysis
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul>
+                            <li>Developed code for Aerospike Nozzle Design inspired by Linear Aerospike Contour Design using Angelino's Method</li>
+                            <li>Performed CFD validation based on research by João Pedro Cristóvão Silva</li>
+                            <li>Conducted CFD analysis of designed contour at operational altitude and pressure ratio</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -290,7 +329,9 @@
                 'content/team_picture.jpg',  // index 0
                 null,  // index 1 - 3D model
                 'content/semana_aero.jpg',  // index 2
-                'content/workshop_rockets.webp'  // index 3
+                'content/workshop_rockets.webp',  // index 3
+                'content/Linear_Aerospike_Countour.png',  // index 4
+                'content/mach_number_110PR.png'  // index 5
             ];
             
             if (index === 1) {
