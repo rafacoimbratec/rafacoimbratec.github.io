@@ -67,7 +67,7 @@
                 <div class="item">
                     <div class="item-header">
                         <h3>Volunteer</h3>
-                        <span class="item-date">Since 2022</span>
+                        <span class="item-date">2022</span>
                     </div>
                     <div class="item-title">Cruz Vermelha | Espinho, Portugal</div>
                     <div class="item-description">
@@ -91,7 +91,7 @@
                         <ul>
                             <li>Major: Space</li>
                             <li>Minor: Aerodynamics and Propulsion</li>
-                            <li>Master's Thesis: Mars Atmospheric Reentry Guidance</li>
+                            <li>Master's Thesis: Mars Atmospheric Entry GNC</li>
                         </ul>
                     </div>
                 </div>
@@ -177,7 +177,7 @@
                 <div class="item">
                     <div class="item-header">
                         <h3>ISTrain (IMechE Railway Challenge)</h3>
-                        <span class="item-date">Since 2025</span>
+                        <span class="item-date">2025</span>
                     </div>
                     <div class="project-links">
                         <a href="https://sites.google.com/tecnico.ulisboa.pt/istrain-pt/" target="_blank" rel="noopener noreferrer">
@@ -259,6 +259,41 @@
 
                 <div class="item">
                     <div class="item-header">
+                        <h3>Master Thesis: Modular Guidance Architecture for Mars Atmospheric Entry</h3>
+                        <span class="item-date">MSc Thesis</span>
+                    </div>
+                    <div class="item-description">
+                        <!-- Project Gallery -->
+                        <div class="project-gallery">
+                            <!-- 6DOF Architecture Diagram -->
+                            <div class="gallery-item" onclick="openLightbox(6)">
+                                <img src="content/6DOF.drawio.png" alt="6DOF Guidance Architecture Diagram" class="gallery-thumbnail">
+                                <div class="gallery-overlay">
+                                    <i class="fa-solid fa-diagram-project"></i> 6DOF Architecture
+                                </div>
+                            </div>
+                            <!-- MSL CAD Model -->
+                            <div class="gallery-item" onclick="openLightbox(7)">
+                                <div class="gallery-thumbnail cad-thumbnail">
+                                    <i class="fa-solid fa-cube" style="font-size: 4rem; color: white;"></i>
+                                    <p style="margin-top: 1rem; color: white;">MSL 3D CAD Model</p>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <i class="fa-solid fa-expand"></i> View Interactive 3D
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul>
+                            <li>Developing high-fidelity 3-DOF and 6-DOF simulation environments for MSL-class entry vehicles.</li>
+                            <li>Implementing a predictor-corrector guidance scheme, IMU-based dead-reckoning navigation, and reaction control system (RCS) actuation logic.</li>
+                            <li>Integrating the Mars Climate Database to model atmospheric density and temperature variations along the entry trajectory.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
                         <h3>Aerospike Nozzle Design</h3>
                         <span class="item-date">Personal Project</span>
                     </div>
@@ -280,7 +315,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <ul>
                             <li>Developed code for Aerospike Nozzle Design inspired by Linear Aerospike Contour Design using Angelino's Method</li>
                             <li>Performed CFD validation based on research by João Pedro Cristóvão Silva</li>
@@ -305,7 +340,7 @@
                 <model-viewer 
                     id="lightbox-model-viewer"
                     src="content/bogie_.glb" 
-                    alt="ISTrain Locomotive CAD Model" 
+                    alt="3D CAD Model" 
                     auto-rotate 
                     camera-controls 
                     shadow-intensity="1"
@@ -324,6 +359,7 @@
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
             const model = document.getElementById('lightbox-model');
+            const modelViewer = document.getElementById('lightbox-model-viewer');
             
             const images = [
                 'content/team_picture.jpg',  // index 0
@@ -331,11 +367,26 @@
                 'content/semana_aero.jpg',  // index 2
                 'content/workshop_rockets.webp',  // index 3
                 'content/Linear_Aerospike_Countour.png',  // index 4
-                'content/mach_number_110PR.png'  // index 5
+                'content/mach_number_110PR.png',  // index 5
+                'content/6DOF.drawio.png',  // index 6
+                null  // index 7 - 3D model
             ];
+
+            const models = {
+                1: {
+                    src: 'content/bogie_.glb',
+                    alt: 'ISTrain Locomotive CAD Model'
+                },
+                7: {
+                    src: 'content/msl.glb',
+                    alt: 'MSL-class Mars Entry Vehicle CAD Model'
+                }
+            };
             
-            if (index === 1) {
+            if (models[index]) {
                 // Show 3D model
+                modelViewer.src = models[index].src;
+                modelViewer.alt = models[index].alt;
                 img.style.display = 'none';
                 model.style.display = 'block';
             } else {
